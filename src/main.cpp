@@ -1,18 +1,11 @@
 #include<iostream>
 #include"problems.h"
 
-using namespace std;
-
 int main() {
-	vector<int> nums = {1, 3, 5, 6};
-	vector<int> resultIndexes;
-	int target = 4;
+	int num = 101;
+	bool result = isPalindrome(num);
 
-	resultIndexes = twoSum(nums, target);
-
-	for (int num : resultIndexes) {
-		cout << num << endl;
-	}
+	cout << result << endl;
 
 	return 0;
 }

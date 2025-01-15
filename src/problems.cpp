@@ -1,6 +1,6 @@
 #include"problems.h"
 
-using namespace std;
+//Two Sum
 vector<int> twoSum(vector<int>& nums, int target) {
 	vector<int> resultIndexes;
 
@@ -14,4 +14,17 @@ vector<int> twoSum(vector<int>& nums, int target) {
 	}
 
 	return resultIndexes;
+}
+
+//Palindrome Number
+bool isPalindrome(int num) {
+	unsigned int result = 0;
+	int original = num;
+
+	while (num > 0) {
+		result = result * 10 + (num % 10);
+		num /= 10;
+	}
+
+	return result == original;
 }

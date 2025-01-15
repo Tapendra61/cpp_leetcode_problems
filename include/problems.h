@@ -1,5 +1,6 @@
 #pragma once
 
 #include<vector>
-
-std::vector<int> twoSum(std::vector<int> &nums, int target);
+using namespace std;
+vector<int> twoSum(vector<int> &nums, int target);
+bool isPalindrome(int num);
