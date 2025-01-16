@@ -2,8 +2,10 @@
 #include"problems.h"
 
 int main() {
-	int num = 101;
-	bool result = isPalindrome(num);
+	vector<int> nums = {3, 3, 2, 4, 3, 5};
+	int val = 3;
+	int result = removeElement(nums, val);
+
 
 	cout << result << endl;
 
