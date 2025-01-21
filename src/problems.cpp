@@ -54,3 +54,24 @@ bool containsDuplicate(vector<int> &nums) {
 	return false;
 }
 
+//Merge Strings Alternately
+string mergeAlternately(string word1, string word2) {
+	string mergedString;
+	mergedString.reserve(word1.size() + word2.size());
+
+	int minSize = word1.size() < word2.size() ? word1.size() : word2.size();
+	for (int i = 0; i < minSize; i++) {
+		mergedString.push_back(word1[i]);
+		mergedString.push_back(word2[i]);
+	}
+
+	for (int i = minSize; i < word1.size(); i++) {
+		mergedString.push_back(word1[i]);
+	}
+
+	for (int i = minSize; i < word2.size(); i++) {
+		mergedString.push_back(word2[i]);
+	}
+
+	return mergedString;
+}

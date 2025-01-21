@@ -2,9 +2,10 @@
 #include"problems.h"
 
 int main() {
-	vector<int> nums = {3, 3, 2, 4, 3, 5};
-	
-	bool result = containsDuplicate(nums);
+	string word1 = "abc";
+	string word2 = "pqrst";
+
+	string result = mergeAlternately(word1, word2);
 
 
 	cout << result << endl;
