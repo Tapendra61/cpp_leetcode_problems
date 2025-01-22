@@ -11,3 +11,4 @@ bool isPalindrome(int num);
 int removeElement(vector<int> &nums, int val);
 bool containsDuplicate(vector<int> &nums);
 string mergeAlternately(string word1, string word2);
+vector<bool> kidsWithCandies(vector<int>& candies, int extraCandies);
