@@ -119,27 +119,17 @@ bool canPlaceFlowers(vector<int> &flowerbed, int n) {
 }
 
 //Move Zeroes
-void moveZeroes(vector<int> &nums) {
-	int index1;
-	int temp;
-
-	bool zeroIndexCaptured = false;
+void moveZeroes(vector<int>& nums) {
+	int nonZeroIndex = 0;
 
 	for (int i = 0; i < nums.size(); i++) {
-		if (nums[i] == 0 && !zeroIndexCaptured) {
-			index1 = i;
-			zeroIndexCaptured = true;
-			continue;
+		if (nums[i] != 0) {
+			nums[nonZeroIndex] = nums[i];
+			nonZeroIndex++;
 		}
+	}
 
-		if(nums[i] != 0) {
-			if (zeroIndexCaptured) {
-				temp = nums[i];
-				nums[i] = nums[index1];
-				nums[index1] = temp;
-				zeroIndexCaptured = false;
-				i = index1;
-			}
-		}
+	for (int i = nonZeroIndex; i < nums.size(); i++) {
+		nums[i] = 0;
 	}
 }
