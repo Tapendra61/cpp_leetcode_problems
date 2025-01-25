@@ -1,5 +1,6 @@
 #pragma once
 
+#include<iostream>
 #include<vector>
 #include<unordered_set>
 #include<string>
@@ -13,3 +14,4 @@ bool containsDuplicate(vector<int> &nums);
 string mergeAlternately(string word1, string word2);
 vector<bool> kidsWithCandies(vector<int>& candies, int extraCandies);
 bool canPlaceFlowers(vector<int> &flowerbed, int n);
+void moveZeroes(vector<int> &nums);

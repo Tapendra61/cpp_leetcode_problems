@@ -2,13 +2,13 @@
 #include"problems.h"
 
 int main() {
-	string word1 = "abc";
-	string word2 = "pqrst";
+	vector<int> nums = {0, 1, 0, 3, 12};
 
-	string result = mergeAlternately(word1, word2);
+	moveZeroes(nums);
 
-
-	cout << result << endl;
+	for (int num : nums) {
+		cout << num << ", ";
+	}
 
 	return 0;
 }
