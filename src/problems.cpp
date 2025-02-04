@@ -133,3 +133,36 @@ void moveZeroes(vector<int>& nums) {
 		nums[i] = 0;
 	}
 }
+
+//Find the Difference of Two Arrays
+vector<vector<int>> findDifference(vector<int>& nums1, vector<int>& nums2) {
+
+}
+
+//Longest Common Prefix
+string longestCommonPrefix(vector<string>& strs) {
+	if (strs.empty()) return "";
+
+	string commonPrefix = "";
+	string smallest = "";
+	
+	smallest = strs[0];
+	for (string& str : strs) {
+		if (str.size() < smallest.size()) {
+			smallest = str;
+		}
+	}
+
+	for (int i = 0; i < smallest.size(); i++) {
+		char currentChar = smallest[i];
+		for (const string& str : strs) {
+			if (str[i] != currentChar) {
+				return commonPrefix;
+			}
+		}
+
+		commonPrefix += currentChar;
+	}
+
+	return commonPrefix;
+}

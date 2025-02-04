@@ -15,3 +15,5 @@ string mergeAlternately(string word1, string word2);
 vector<bool> kidsWithCandies(vector<int>& candies, int extraCandies);
 bool canPlaceFlowers(vector<int> &flowerbed, int n);
 void moveZeroes(vector<int> &nums);
+vector<vector<int>> findDifference(vector<int>& nums1, vector<int>& nums2);
+string longestCommonPrefix(vector<string>& strs);
