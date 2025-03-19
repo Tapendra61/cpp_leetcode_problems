@@ -166,3 +166,23 @@ string longestCommonPrefix(vector<string>& strs) {
 
 	return commonPrefix;
 }
+
+//Find Pivot Index
+int pivotIndex(vector<int> nums) {
+	int index = -1;
+	for (int i = 0; i < nums.size(); i++) {
+		int leftSum = 0;
+		int rightSum = 0;
+		for (int j = 0; j < i; j++) {
+			leftSum += nums[j];
+		}
+
+		for (int j = i + 1; j < nums.size(); j++) {
+			rightSum += nums[j];
+		}
+
+		if (leftSum == rightSum) return i;
+
+	}
+	return index;
+}

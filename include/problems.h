@@ -17,3 +17,4 @@ bool canPlaceFlowers(vector<int> &flowerbed, int n);
 void moveZeroes(vector<int> &nums);
 vector<vector<int>> findDifference(vector<int>& nums1, vector<int>& nums2);
 string longestCommonPrefix(vector<string>& strs);
+int pivotIndex(vector<int>& nums);
