@@ -2,13 +2,11 @@
 #include"problems.h"
 
 int main() {
-	vector<int> nums = {0, 1, 0, 3, 12};
+	string input = "leet**cod*e";
 
-	moveZeroes(nums);
+	string result = removeStars(input);
 
-	for (int num : nums) {
-		cout << num << ", ";
-	}
+	print("{}", result);
 
 	return 0;
 }

@@ -168,7 +168,7 @@ string longestCommonPrefix(vector<string>& strs) {
 }
 
 //Find Pivot Index
-int pivotIndex(vector<int> nums) {
+int pivotIndex(vector<int>& nums) {
 	int totalSum = 0, leftSum = 0;
 
 	for (int num : nums) totalSum += num;
@@ -179,4 +179,31 @@ int pivotIndex(vector<int> nums) {
 	}
 	
 	return -1;
+}
+
+//Removing Stars From a String
+string removeStars(string s) {
+	stack<char> st;
+
+	for (char c : s) {
+		if (c == '*') {
+			if (!st.empty()) {
+				st.pop();
+			}
+			continue;
+		}
+
+		st.push(c);
+	}
+
+	string result;
+	result.resize(st.size());
+	size_t back = result.size() - 1;
+
+	while (!st.empty()) {
+		result[back--] = st.top();
+		st.pop();
+	}
+
+	return result;
 }
