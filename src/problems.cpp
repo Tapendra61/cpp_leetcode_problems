@@ -207,3 +207,42 @@ string removeStars(string s) {
 
 	return result;
 }
+
+//Asteroid Collision
+vector<int> asteroidCollision(vector<int>& asteroids) {
+	stack<int> asteroidStack;
+
+	for (int asteroid : asteroids) {
+		bool destroyed = false;
+
+		while (!asteroidStack.empty() && asteroidStack.top() > 0 && asteroid < 0) {
+			if (asteroidStack.top() < -asteroid) {
+				asteroidStack.pop();
+				continue;
+			}
+			else if (asteroidStack.top() == -asteroid) {
+				asteroidStack.pop();
+				destroyed = true;
+				break;
+			}
+			else {
+				destroyed = true;
+				break;
+			}
+		}
+
+		if (!destroyed) {
+			asteroidStack.push(asteroid);
+		}
+	}
+
+	vector<int> remainingAsteroids;
+	remainingAsteroids.resize(asteroidStack.size());
+
+	for (int i = asteroidStack.size() - 1; i >= 0; --i) {
+		remainingAsteroids[i] = asteroidStack.top();
+		asteroidStack.pop();
+	}
+
+	return remainingAsteroids;
+}

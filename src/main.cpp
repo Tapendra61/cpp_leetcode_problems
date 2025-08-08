@@ -2,11 +2,13 @@
 #include"problems.h"
 
 int main() {
-	string input = "leet**cod*e";
+	vector<int> asteroids = {-2, -1, 1, 2};
 
-	string result = removeStars(input);
+	vector<int> result = asteroidCollision(asteroids);
 
-	print("{}", result);
+	for (int asteroid : result) {
+		print("{}", asteroid);
+	}
 
 	return 0;
 }
