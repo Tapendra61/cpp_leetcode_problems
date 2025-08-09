@@ -177,7 +177,7 @@ int pivotIndex(vector<int>& nums) {
 		if (leftSum == totalSum - leftSum - nums[i]) return i;
 		leftSum += nums[i];
 	}
-	
+
 	return -1;
 }
 
@@ -245,4 +245,28 @@ vector<int> asteroidCollision(vector<int>& asteroids) {
 	}
 
 	return remainingAsteroids;
+}
+
+// Reverse Vowels of a String
+string reverseVowels(string s) {
+
+	string reversedString = s;
+	int lastJ = s.length();
+
+	for (int i = 0; i < lastJ; ++i) {
+		if (tolower(reversedString[i]) == 'a' || tolower(s[i]) == 'e' || tolower(s[i]) == 'i' || tolower(s[i]) == 'o' || tolower(s[i]) == 'u') {
+			for (int j = lastJ - 1; j > i; --j) {
+				if (tolower(reversedString[j]) == 'a' || tolower(s[j]) == 'e' || tolower(s[j]) == 'i' || tolower(s[j]) == 'o' || tolower(s[j]) == 'u') {
+					char temp;
+					temp = reversedString[i];
+					reversedString[i] = reversedString[j];
+					reversedString[j] = temp;
+					lastJ = j;
+					break;
+				}
+			}
+		}
+	}
+
+	return reversedString;
 }

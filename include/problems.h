@@ -21,3 +21,4 @@ string longestCommonPrefix(vector<string>& strs);
 int pivotIndex(vector<int>& nums);
 string removeStars(string s);
 vector<int> asteroidCollision(vector<int>& asteroids);
+string reverseVowels(string s);
