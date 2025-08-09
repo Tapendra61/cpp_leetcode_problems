@@ -250,23 +250,15 @@ vector<int> asteroidCollision(vector<int>& asteroids) {
 // Reverse Vowels of a String
 string reverseVowels(string s) {
 
-	string reversedString = s;
-	int lastJ = s.length();
+	int i = 0, j = s.length() - 1;
 
-	for (int i = 0; i < lastJ; ++i) {
-		if (tolower(reversedString[i]) == 'a' || tolower(s[i]) == 'e' || tolower(s[i]) == 'i' || tolower(s[i]) == 'o' || tolower(s[i]) == 'u') {
-			for (int j = lastJ - 1; j > i; --j) {
-				if (tolower(reversedString[j]) == 'a' || tolower(s[j]) == 'e' || tolower(s[j]) == 'i' || tolower(s[j]) == 'o' || tolower(s[j]) == 'u') {
-					char temp;
-					temp = reversedString[i];
-					reversedString[i] = reversedString[j];
-					reversedString[j] = temp;
-					lastJ = j;
-					break;
-				}
-			}
-		}
+	while (i < j) {
+		if (!isVowel(s[i])) { ++i; continue; }
+		if (!isVowel(s[j])) { --j; continue; }
+		swap(s[i], s[j]);
+		++i;
+		--j;
 	}
 
-	return reversedString;
+	return s;
 }
