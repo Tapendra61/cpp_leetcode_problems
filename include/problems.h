@@ -6,6 +6,7 @@
 #include<string>
 #include<stack>
 #include"utility.h"
+#include<queue>
 
 using namespace std;
 
@@ -23,3 +24,21 @@ int pivotIndex(vector<int>& nums);
 string removeStars(string s);
 vector<int> asteroidCollision(vector<int>& asteroids);
 string reverseVowels(string s);
+
+// Number of Recent Calls
+class RecentCounter {
+	queue<int> q;
+public:
+	RecentCounter() {
+		
+	}
+
+	int ping(int t) {
+		q.push(t);
+		while (q.front() < (t - 3000)) {
+			q.pop();
+		}
+
+		return q.size();
+	}
+};
