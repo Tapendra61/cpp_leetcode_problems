@@ -42,3 +42,5 @@ public:
 		return q.size();
 	}
 };
+
+int largestAltitude(vector<int>& gain);

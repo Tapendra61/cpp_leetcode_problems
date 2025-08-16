@@ -262,3 +262,15 @@ string reverseVowels(string s) {
 
 	return s;
 }
+
+// Find the Highest Altitude
+int largestAltitude(vector<int>& gain) {
+	int highest = 0;
+	int sum = 0;
+
+	for (int i = 0; i < gain.size() - 1; i++) {
+		sum = sum + gain[i];
+		if (sum > highest) highest = sum;
+	}
+	return highest;
+}
